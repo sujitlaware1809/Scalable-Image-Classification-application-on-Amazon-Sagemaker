@@ -35,6 +35,33 @@ The objective is to build and deploy an image classification model for **Scones 
 - AWS SageMaker instance type — `ml.t3.medium`
 
 ---
+## 3.2 Building a State Machine via AWS Step Functions
+
+The project uses **AWS Step Functions** to orchestrate the machine learning workflow by integrating multiple AWS Lambda functions into a single automated pipeline.
+
+### 3.2.1 Execution Flow of the Step Function
+
+The Step Function executes the following workflow:
+
+- It starts by serializing image data stored in Amazon S3.
+- Then it sends the serialized data to a SageMaker endpoint for image classification.
+- Finally, it filters the predictions to retain only those with confidence scores above a set threshold.
+
+![Execution Flow of the Step Function](Screenshot-of-Working-Step-Function-Excution.png)
+
+### 3.2.2 Step Function Graph
+
+The graphical representation of the state machine shows the sequence of Lambda functions and their transitions.
+
+![Step Function Graph](Screenshot-of-Working-Step-Functions-Graph.png)
+
+### 3.2.3 Step Function Output
+
+Example output of the Step Function after successful execution, showing processed results and filtered inferences.
+
+![Step Function Output](Screenshot-of-Working-Step-Function-2.png)
+
+---
 
 ## Installation and Setup
 
