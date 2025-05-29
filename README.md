@@ -59,7 +59,7 @@ The graphical representation of the state machine shows the sequence of Lambda f
 
 Example output of the Step Function after successful execution, showing processed results and filtered inferences.
 
-![Step Function Output](Screenshot-of-Working-Step-Function-2.png)
+![Step Function Output](Screenshot-of-Working-Step-Function.png)
 
 ---
 
